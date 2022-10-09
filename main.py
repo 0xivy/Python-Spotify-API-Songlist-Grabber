@@ -42,5 +42,7 @@ songList =[]
 for x in trackListv2:
     song = x['track']['name']
     songList.append(song)
-print (songList)
-
+with open(r'SongList.txt', 'w') as fp:
+    for item in songList:
+        fp.write("%s\n" % item)
+    print('Done')
